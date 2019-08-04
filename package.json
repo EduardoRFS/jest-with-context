@@ -1,0 +1,47 @@
+{
+  "name": "jest-with-context",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:EduardoRFS/jest-with-context.git",
+  "author": "EduardoRFS <theeduardorfs@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.16",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-airbnb-typescript": "^4.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "jest": "*"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-typescript/base",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "no-shadow": 0
+    }
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src",
+      "<rootDir>/tests"
+    ],
+    "preset": "ts-jest/presets/js-with-ts"
+  }
+}
