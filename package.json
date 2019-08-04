@@ -1,7 +1,7 @@
 {
   "name": "jest-with-context",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.1.0",
+  "main": "dist/src/index.js",
   "repository": "git@github.com:EduardoRFS/jest-with-context.git",
   "author": "EduardoRFS <theeduardorfs@gmail.com>",
   "license": "MIT",

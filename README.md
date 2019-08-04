@@ -33,3 +33,41 @@ withContext(
   }
 );
 ```
+
+## Lifecycle
+
+```typescript
+import { withContext } from '../src';
+
+withContext('after each', { foo: 0 }, ({ test, afterEach }) => {
+  let fooInternal = 0;
+  afterEach(() => {
+    fooInternal++;
+    return { foo: fooInternal };
+  });
+  test('foo 0', ({ foo }) => {
+    expect(foo).toBe(0);
+  });
+  test('foo 1', ({ foo }) => {
+    expect(foo).toBe(1);
+  });
+});
+
+// if you know what you're doing
+withContext<{ foo: number }>(
+  'before each without context',
+  ({ test, beforeEach }) => {
+    let fooInternal = 0;
+    beforeEach(() => {
+      fooInternal++;
+      return { foo: fooInternal };
+    });
+    test('foo 1', ({ foo }) => {
+      expect(foo).toBe(1);
+    });
+    test('foo 2', ({ foo }) => {
+      expect(foo).toBe(2);
+    });
+  }
+);
+```
