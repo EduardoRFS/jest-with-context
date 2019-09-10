@@ -69,3 +69,7 @@ withContext<{ foo: number }>(
   }
 );
 ```
+
+## Improvement needed
+
+Need to support `Context` as a type alias
